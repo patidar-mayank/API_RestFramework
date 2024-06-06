@@ -7,3 +7,10 @@ class MovieViewSet(viewsets.ModelViewSet):
     serializer_class = MovieSerializer  # Corrected attribute name
 
 # Create your views here.
+class ActionViewSet(viewsets.ModelViewSet):
+    queryset=Moviedata.objects.filter(typ='action')
+    serializer_class=MovieSerializer
+
+class ComdeyViewSet(viewsets.ModelViewSet):
+    queryset =Moviedata.objects.filter(typ='comedy')
+    serializer_class=MovieSerializer
